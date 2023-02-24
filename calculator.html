@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="dcterms.rightsHolder" content="Krzysztof Mickiewicz" />
+    <meta name="dcterms.rights" content="all rights reserved" />
+    <meta name="dcterms.dateCopyrighted" content="2023" />
+
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>The Mind of the Ages</h1>
+    </header>
+
+    <main>
+        <article class="left">
+        </article>
+        <article class="main">
+            <section class="workspace">
+                <h2>Calculate the crap out of these numbers: </h2>
+                <div>
+                    <label for="numberOne">Number One: </label>
+                    <input type="number" id="numberOne" step="0.01"><br>
+                    <label for="numberTwo">Number Two: </label>
+                    <input type="number" id="numberTwo" step="0.01"><br>
+                    <div>
+                        <label for="typeOfCalculation" id="calculationLabel">Calculation: </label>
+                        <form id="typeOfCalculation">
+                            <div>
+                                <input type="radio" id="addition" name="calculation">
+                                <label for="addition">Addition</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="substraction" name="calculation">
+                                <label for="substraction">Substraction</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="multiplication" name="calculation">
+                                <label for="multiplication">Multiplication</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="division" name="calculation">
+                                <label for="division">Division</label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <button onclick="calculate()">Calculate</button><br>
+                    <label for="result">Result: </label>
+                    <output id="result"></output>
+                </div>
+
+                <h2>Calculate the average: </h2>
+                <div>
+                    <label for="numbers">Enter numbers separated by commas: </label><br>
+                    <input type="text" id="numbers" name="numbers"><br>
+
+                    <button onclick="calculateAverage()">Calculate Average</button><br>
+                    <label for="averageResult">Average: </label>
+                    <output id="averageResult"></output>
+                </div>
+
+                <h2>Make a supreme entity out of the following words: </h2>
+                <div>
+                    <form id="formMonster">
+                        <button type="button" onclick="createNewField()">Add another word to the Being: </button><br>
+                        <label for="inputField">Enter a word: </label><br>
+                        <input type="text" id="inputField" name="inputField" placeholder="--word--">
+                    </form>
+                    <button type="button" onclick="createMonster()">Create: </button><br>
+                    <label for="monsterResult">Result: </label>
+                    <output id="monsterResult"></output>
+                </div>
+            </section>
+        </article>
+        <article
